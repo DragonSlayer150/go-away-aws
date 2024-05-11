@@ -1,5 +1,5 @@
 
-# Fuck off AWS
+# Go away AWS
 Amazon publishes a list of the IP addresses they control here: https://ip-ranges.amazonaws.com/ip-ranges.json . What follows is a way to prevent yourself / the websites you visit from reaching out to AWS machines. Spoiler alert: The internet becomes pretty unusable. For Linux see: https://github.com/corbanworks/aws-blocker
 
 ### Dependencies 
@@ -10,7 +10,7 @@ This is for OSX - specifically using their builtin packet filter PF.  You will a
 
 ### Installation
 1. Clone this repository 
-1. `cd fuck-off-aws/scripts`
+1. `cd go-away-aws/scripts`
 1. `chmod +x build.sh start-blocking.sh stop.sh`
 1. create or edit the file: `/etc/pf.conf`, and add this line to the end of it: `block out log from any to <aws>`
 1. `sudo ./build.sh` <- all scripts must be run as a superuser :(.  This script will find the most recent list of Amazon IPs, and set up a filter using PF to block and log all traffic from your machine to those IP addresses.  This will also block any third party content, images, or fonts that are served by AWS.   
